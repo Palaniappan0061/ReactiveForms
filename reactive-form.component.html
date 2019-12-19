@@ -1,0 +1,14 @@
+
+<form [formGroup]='registerForm'>
+
+<input type="text" formControlName="Username" placeholder="Username">
+<br>
+<input type="email" formControlName="Email" placeholder="email">
+<br>
+<input type="tel" formControlName="Mobile" placeholder="Mobile">
+<br>
+<select formArrayName="Country">
+    <option [formGroupName]="i" *ngFor="let item of countryDropDown[i];let i=index;" [value]="item">{{item}}</option>
+</select>
+
+</form>
